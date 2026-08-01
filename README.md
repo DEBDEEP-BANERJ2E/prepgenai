@@ -1,5 +1,8 @@
 # PrepGen AI - The Intelligent Study Workspace
 
+Started by Lokesh Mondal
+Updated by Debdeep Banerjee
+
 PrepGen AI is an advanced, full-stack educational application designed to revolutionize how students and professionals generate, consume, and collaborate on study materials. Evolving far beyond a simple note generator, PrepGen AI is a complete "NotebookLM-style" workspace equipped with a personalized AI tutor, spaced repetition (SRS) flashcards, and a simulated community collaboration platform.
 
 Built with a **React (Vite) + TailwindCSS** frontend and a **Node.js + Express + MongoDB** backend, the application utilizes the **Google Gemini API** for its heavy lifting.
