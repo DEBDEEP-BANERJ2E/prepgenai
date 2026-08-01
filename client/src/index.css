@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Custom scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 114, 128, 0.8);
+}
+
+/* 3D Flip Card Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Print Optimization */
+@media print {
+  @page { margin: 1cm; }
+  
+  html, body, #root { 
+    background: white !important; 
+    color: black !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Reset all scrolling containers to allow natural document flow for printing */
+  * {
+    overflow: visible !important;
+  }
+
+  /* Reset fixed heights that cause truncation */
+  .h-screen, .h-full, .max-h-screen {
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  .no-print { 
+    display: none !important; 
+  }
+  
+  /* Hide the sidebar and any other fixed elements */
+  aside, nav, header {
+    display: none !important;
+  }
+
+  /* Maximize the printable area */
+  .printable-result {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .print-section {
+    page-break-inside: avoid;
+    margin-bottom: 2cm;
+  }
+
+  /* Don't break charts or diagrams */
+  svg, img, canvas {
+    page-break-inside: avoid;
+  }
+}
+
+/* Custom EasyMDE Styling for premium feel */
+.custom-mde-editor .editor-toolbar {
+  border: 1px solid #e5e7eb;
+  border-bottom: none;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  background-color: #f9fafb;
+  opacity: 1;
+}
+
+.custom-mde-editor .editor-toolbar button {
+  color: #4b5563;
+  transition: all 0.2s;
+}
+
+.custom-mde-editor .editor-toolbar button:hover,
+.custom-mde-editor .editor-toolbar button.active {
+  background-color: #f3f4f6;
+  color: #6366f1; /* Indigo-500 */
+  border-color: transparent;
+}
+
+.custom-mde-editor .CodeMirror {
+  border: 1px solid #e5e7eb;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  padding: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  color: #374151;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.custom-mde-editor .CodeMirror-focused {
+  border-color: #818cf8; /* Indigo-400 */
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
